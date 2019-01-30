@@ -1,0 +1,10 @@
+applications:
+- name: message-service
+  random-route: true
+  memory: 650mb
+  instances: 1
+  path: target/message-service-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  services:
+  env:
+    JAVA_OPTS: -Xmx600M -Xms500M
