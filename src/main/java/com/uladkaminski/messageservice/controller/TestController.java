@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Value("${server.port}")
+    @Value("${server.port:default}")
     private String value;
 
     @GetMapping("/test")
