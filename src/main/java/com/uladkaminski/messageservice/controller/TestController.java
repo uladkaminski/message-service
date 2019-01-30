@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Value("${values.test}")
+    @Value("${server.port}")
     private String value;
+
     @GetMapping("/test")
     public String test(){
         return value;
     }
+
 }
